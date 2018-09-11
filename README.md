@@ -14,8 +14,8 @@ package review guide](https://github.com/ropensci/dev_guide)
 
 ## As an author
 
-  - [Open an issue]() on the NUMBATs pkgreview repo and fill out the
-    template
+  - [Open an issue](https://github.com/numbats/pkg-review/issues/new) on
+    the NUMBATs pkgreview repo and fill out the template
   - Try and respond to reviewers within 2 weeks
   - [Here is an author response example from
     rOpenSci](https://github.com/ropensci/onboarding/issues/160#issuecomment-355043656)
@@ -23,30 +23,21 @@ package review guide](https://github.com/ropensci/dev_guide)
 ## As a reviewer
 
   - Copy this [modified review template](), and fill it in on the repo
-
   - Provide general comments on:
-
-  - Does the code comply with general principles in the [Mozilla
-    reviewing
-    guide](https://mozillascience.github.io/codeReview/review.html)?
-
-  - Does the package comply with the [rOpenSci packaging
-    guide](https://ropensci.github.io/dev_guide/building.html#building)?
-
-  - Are there improvements that could be made to the code style?
-
-  - Is there code duplication in the package that should be reduced?
-
-  - Are there user interface improvements that could be made?
-
-  - Are there performance improvements that could be made?
-
-  - Is the documentation (installation
-    instructions/vignettes/examples/demos) clear and sufficient?
-
-  - If you have your own relevant data/problem, work through it with the
-    package. You may find rough edges and use-cases the author didn’t
-    think about.
+      - Does the code comply with general principles in the [Mozilla
+        reviewing
+        guide](https://mozillascience.github.io/codeReview/review.html)?
+      - Does the package comply with the [rOpenSci packaging
+        guide](https://ropensci.github.io/dev_guide/building.html#building)?
+      - Are there improvements that could be made to the code style?
+      - Is there code duplication in the package that should be reduced?
+      - Are there user interface improvements that could be made?
+      - Are there performance improvements that could be made?
+      - Is the documentation (installation
+        instructions/vignettes/examples/demos) clear and sufficient?
+      - If you have your own relevant data/problem, work through it with
+        the package. You may find rough edges and use-cases the author
+        didn’t think about.
 
 Please be respectful and kind to the authors in your reviews. Our [code
 of conduct](#code-of-conduct) is mandatory for everyone involved in our
