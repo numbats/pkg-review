@@ -16,22 +16,22 @@ ppl_to_review <-  c(
 
 
 pkgs <- tibble::tribble(
-  ~pkg,        ~repo_link,
-  "naniar",    "https://github.com/njtierney/naniar",
-  "stray",     "https://github.com/pridiltal/stray"   ,
-  "tsibble",   "https://github.com/tidyverts/tsibble",
-  "oddstream", "https://github.com/pridiltal/oddstream",
-  "seer",      "https://github.com/thiyangt/seer",
-  "tsfeatures","http://github.com/robjhyndman/tsfeatures",
-  "plyranges", "https://github.com/sa-lee/plyranges",
-  "tourr",     "https://github.com/nspyrison/tourr",
-  "spinifex",  "https://github.com/nspyrison/spinifex",
-  "nullabor",  "https://github.com/dicook/nullabor",
-  "fable",     "https://github.com/tidyverts/fable",
-  "fasster",   "https://github.com/tidyverts/fasster",
-  "suggrants", "https://github.com/earowang/sugrrants"
+  ~pkg,        ~repo_link,                             ~author,
+  "naniar",    "https://github.com/njtierney/naniar", "Nick T",
+  "stray",     "https://github.com/pridiltal/stray",  "Dilini",
+  "tsibble",   "https://github.com/tidyverts/tsibble", "Earo",
+  "oddstream", "https://github.com/pridiltal/oddstream", "Dilini",
+  "seer",      "https://github.com/thiyangt/seer",      "Thiyanga",
+  "tsfeatures","http://github.com/robjhyndman/tsfeatures", "Rob",
+  "plyranges", "https://github.com/sa-lee/plyranges",      "Stuart",
+  "tourr",     "https://github.com/nspyrison/tourr",       "Nick S",
+  "spinifex",  "https://github.com/nspyrison/spinifex",    "Nick S",
+  "nullabor",  "https://github.com/dicook/nullabor",       "Di",
+  "fable",     "https://github.com/tidyverts/fable",       "Rob / Mitch",
+  "fasster",   "https://github.com/tidyverts/fasster",     "Mitch",
+  "suggrants", "https://github.com/earowang/sugrrants",     "Earo"
 )
 
 library(tidyverse)
 pkgs %>%
-  mutate(ppl = sample(ppl_to_review, replace = FALSE))
+  mutate(reviewer = sample(ppl_to_review, replace = FALSE))

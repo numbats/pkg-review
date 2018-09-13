@@ -10,19 +10,82 @@ others code.
 This project will use a reduced set of guidelines based on [rOpenSci’s
 package review guide](https://github.com/ropensci/dev_guide)
 
+# Suggested packages
+
+The suggested packages and authors are listed in [pkgs.csv]() and below:
+
+``` r
+pkgs <- readr::read_csv("pkgs.csv")
+#> Parsed with column specification:
+#> cols(
+#>   pkg = col_character(),
+#>   repo_link = col_character(),
+#>   author = col_character()
+#> )
+
+knitr::kable(pkgs)
+```
+
+| pkg        | repo\_link                                 | author      |
+| :--------- | :----------------------------------------- | :---------- |
+| naniar     | <https://github.com/njtierney/naniar>      | Nick T      |
+| stray      | <https://github.com/pridiltal/stray>       | Dilini      |
+| tsibble    | <https://github.com/tidyverts/tsibble>     | Earo        |
+| oddstream  | <https://github.com/pridiltal/oddstream>   | Dilini      |
+| seer       | <https://github.com/thiyangt/seer>         | Thiyanga    |
+| tsfeatures | <http://github.com/robjhyndman/tsfeatures> | Rob         |
+| plyranges  | <https://github.com/sa-lee/plyranges>      | Stuart      |
+| tourr      | <https://github.com/nspyrison/tourr>       | Nick S      |
+| spinifex   | <https://github.com/nspyrison/spinifex>    | Nick S      |
+| nullabor   | <https://github.com/dicook/nullabor>       | Di          |
+| fable      | <https://github.com/tidyverts/fable>       | Rob / Mitch |
+| fasster    | <https://github.com/tidyverts/fasster>     | Mitch       |
+| suggrants  | <https://github.com/earowang/sugrrants>    | Earo        |
+
 # How to start
 
-## As an author
+## As an author of an R package
 
   - [Open an issue](https://github.com/numbats/pkg-review/issues/new) on
     the NUMBATs pkgreview repo and fill out the template
-  - Try and respond to reviewers within 2 weeks
-  - [Here is an author response example from
+
+  - Myself, Rob, or Di, will assign a reviewer.
+
+  - The reviewers will try their best to repsond within 2 weeks
+
+  - For your info, [Here is an author response example from
     rOpenSci](https://github.com/ropensci/onboarding/issues/160#issuecomment-355043656)
 
 ## As a reviewer
 
-  - Copy this [modified review template](), and fill it in on the repo
+You can read blog posts written by reviewers about their experiences
+[via this link](https://ropensci.org/tags/reviewer/). In particular, in
+[this blog post by Mara
+Averick](https://ropensci.org/blog/2017/08/22/first-package-review/)
+read about the “naive user” role a reviewer can take to provide useful
+feedback even without being experts of the package’s topic or
+implementation, by asking themselves *“What did I think this thing would
+do? Does it do it? What are things that scare me off?”*. In [another
+blog
+post](https://ropensci.org/blog/2017/09/08/first-review-experiences/)
+Verena Haunschmid explains how she alternated between using the package
+and checking its code.
+
+As both a former reviewer and package author [Adam
+Sparks](https://adamhsparks.github.io/) [wrote
+this](https://twitter.com/adamhsparks/status/898132036451303425)
+“\[write\] a good critique of the package structure and best coding
+practices. If you know how to do something better, tell me. It’s easy to
+miss documentation opportunities as a developer, as a reviewer, you have
+a different view. You’re a user that can give feedback. What’s not clear
+in the package? How can it be made more clear? If you’re using it for
+the first time, is it easy? Do you know another R package that maybe I
+should be using? Or is there one I’m using that perhaps I shouldn’t be?
+If you can contribute to the package, offer.”
+
+  - Copy this [modified review
+    template](https://raw.githubusercontent.com/numbats/pkg-review/master/review_template.md),
+    and fill it in on the repo
   - Provide general comments on:
       - Does the code comply with general principles in the [Mozilla
         reviewing
@@ -39,12 +102,15 @@ package review guide](https://github.com/ropensci/dev_guide)
         the package. You may find rough edges and use-cases the author
         didn’t think about.
 
-Please be respectful and kind to the authors in your reviews. Our [code
-of conduct](#code-of-conduct) is mandatory for everyone involved in our
-review process. We expect you to submit your review withing 3 weeks,
-depending on the deadline set by the editor. Please contact the editor
-directly or in the submission thread to inform them about possible
-delays.
+Please be respectful and kind to the authors in your reviews. The
+rOpenSci [code of
+conduct](https://ropensci.github.io/dev_guide/policies.html#code-of-conduct)
+is mandatory for everyone involved in our review process.
+
+We would like you to submit your review withing 3 weeks.
+
+Please contact the editor directly or in the submission thread to inform
+them about possible delays.
 
 We encourage you to use automated tools to facilitate your reviewing.
 These include:
@@ -91,31 +157,6 @@ need to be as long as these examples):
     [review](https://github.com/ropensci/onboarding/issues/18#issuecomment-120445737)
     (from before we had a review template)
 
-You can read blog posts written by reviewers about their experiences
-[via this link](https://ropensci.org/tags/reviewer/). In particular, in
-[this blog post by Mara
-Averick](https://ropensci.org/blog/2017/08/22/first-package-review/)
-read about the “naive user” role a reviewer can take to provide useful
-feedback even without being experts of the package’s topic or
-implementation, by asking themselves *“What did I think this thing would
-do? Does it do it? What are things that scare me off?”*. In [another
-blog
-post](https://ropensci.org/blog/2017/09/08/first-review-experiences/)
-Verena Haunschmid explains how she alternated between using the package
-and checking its code.
-
-As both a former reviewer and package author [Adam
-Sparks](https://adamhsparks.github.io/) [wrote
-this](https://twitter.com/adamhsparks/status/898132036451303425)
-“\[write\] a good critique of the package structure and best coding
-practices. If you know how to do something better, tell me. It’s easy to
-miss documentation opportunities as a developer, as a reviewer, you have
-a different view. You’re a user that can give feedback. What’s not clear
-in the package? How can it be made more clear? If you’re using it for
-the first time, is it easy? Do you know another R package that maybe I
-should be using? Or is there one I’m using that perhaps I shouldn’t be?
-If you can contribute to the package, offer.”
-
 ## Submitting the Review
 
   - When your review is complete, paste it as a comment into the package
@@ -140,11 +181,8 @@ review. We encourage ongoing discussion between package authors and
 reviewers, and you may ask editors to clarify issues in the review
 thread as well.
 
-## As an editor
-
 # Possible names for the review repo:
 
-  - dunnart
   - potoroo
   - platypus
   - petrel
