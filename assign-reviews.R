@@ -1,7 +1,7 @@
 ppl_to_review <-  c(
-  "Cameron",
+  "Cameron Roach",
   "Di Cook",
-  "Dilini",
+  "Dilini Talagala",
   "Earo Wang",
   "Mitchell O’Hara-Wild",
   "Nicholas Spyrison",
@@ -10,7 +10,8 @@ ppl_to_review <-  c(
   "Stuart Lee",
   "Rob Hyndman",
   "Roger Peng",
-  "Thiyanga"
+  "Ursula Laa",
+  "Thiyanga Talagala"
 )
 
 
@@ -27,7 +28,7 @@ pkgs <- tibble::tribble(
   "spinifex",  "https://github.com/nspyrison/spinifex",
   "nullabor",  "https://github.com/dicook/nullabor",
   "fable",     "https://github.com/tidyverts/fable",
-  # "fasster",   "https://github.com/tidyverts/fasster",
+  "fasster",   "https://github.com/tidyverts/fasster",
   "suggrants", "https://github.com/earowang/sugrrants"
 )
 
