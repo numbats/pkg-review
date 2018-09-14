@@ -21,7 +21,7 @@ This project will use a reduced set of guidelines based on [rOpenSci's package r
 
 The suggested packages and authors are listed in [pkgs.csv]() and below:
 
-```{r list-pkgs}
+```{r list-pkgs, cache = FALSE}
 pkgs <- readr::read_csv("pkgs.csv")
 
 knitr::kable(pkgs)

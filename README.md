@@ -40,7 +40,7 @@ knitr::kable(pkgs)
 | nullabor   | <https://github.com/dicook/nullabor>       | Di          |
 | fable      | <https://github.com/tidyverts/fable>       | Rob / Mitch |
 | fasster    | <https://github.com/tidyverts/fasster>     | Mitch       |
-| suggrants  | <https://github.com/earowang/sugrrants>    | Earo        |
+| sugrants   | <https://github.com/earowang/sugrrants>    | Earo        |
 
 # How to start
 
