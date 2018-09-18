@@ -12,7 +12,8 @@ package review guide](https://github.com/ropensci/dev_guide)
 
 # Suggested packages
 
-The suggested packages and authors are listed in [pkgs.csv]() and below:
+The suggested packages, authors, and reviewers are listed in
+[pkgs.csv]() and below:
 
 ``` r
 pkgs <- readr::read_csv("pkgs.csv")
@@ -23,24 +24,45 @@ pkgs <- readr::read_csv("pkgs.csv")
 #>   author = col_character()
 #> )
 
-knitr::kable(pkgs)
+ppl_to_review <-  c(
+  "Cameron Roach",
+  "Di Cook",
+  "Dilini Talagala",
+  "Earo Wang",
+  "Mitchell O’Hara-Wild",
+  "Nicholas Spyrison",
+  "Nicholas Tierney",
+  "Sayani Gupta",
+  "Stuart Lee",
+  "Rob Hyndman",
+  "Roger Peng",
+  "Ursula Laa",
+  "Thiyanga Talagala"
+)
+
+library(tidyverse)
+
+set.seed(2018-9-18-1717)
+pkgs %>%
+  mutate(reviewer = sample(ppl_to_review, replace = FALSE)) %>%
+  knitr::kable()
 ```
 
-| pkg        | repo\_link                                 | author      |
-| :--------- | :----------------------------------------- | :---------- |
-| naniar     | <https://github.com/njtierney/naniar>      | Nick T      |
-| stray      | <https://github.com/pridiltal/stray>       | Dilini      |
-| tsibble    | <https://github.com/tidyverts/tsibble>     | Earo        |
-| oddstream  | <https://github.com/pridiltal/oddstream>   | Dilini      |
-| seer       | <https://github.com/thiyangt/seer>         | Thiyanga    |
-| tsfeatures | <http://github.com/robjhyndman/tsfeatures> | Rob         |
-| plyranges  | <https://github.com/sa-lee/plyranges>      | Stuart      |
-| tourr      | <https://github.com/nspyrison/tourr>       | Nick S      |
-| spinifex   | <https://github.com/nspyrison/spinifex>    | Nick S      |
-| nullabor   | <https://github.com/dicook/nullabor>       | Di          |
-| fable      | <https://github.com/tidyverts/fable>       | Rob / Mitch |
-| fasster    | <https://github.com/tidyverts/fasster>     | Mitch       |
-| sugrants   | <https://github.com/earowang/sugrrants>    | Earo        |
+| pkg        | repo\_link                                 | author             | reviewer             |
+| :--------- | :----------------------------------------- | :----------------- | :------------------- |
+| naniar     | <https://github.com/njtierney/naniar>      | Nick T             | Stuart Lee           |
+| stray      | <https://github.com/pridiltal/stray>       | Dilini             | Cameron Roach        |
+| tsibble    | <https://github.com/tidyverts/tsibble>     | Earo               | Mitchell O’Hara-Wild |
+| oddstream  | <https://github.com/pridiltal/oddstream>   | Dilini             | Thiyanga Talagala    |
+| seer       | <https://github.com/thiyangt/seer>         | Thiyanga           | Earo Wang            |
+| tsfeatures | <http://github.com/robjhyndman/tsfeatures> | Rob                | Nicholas Spyrison    |
+| plyranges  | <https://github.com/sa-lee/plyranges>      | Stuart             | Sayani Gupta         |
+| tourr      | <https://github.com/ggobi/tourr>           | Di                 | Roger Peng           |
+| spinifex   | <https://github.com/nspyrison/spinifex>    | Nick S             | Ursula Laa           |
+| nullabor   | <https://github.com/dicook/nullabor>       | Di                 | Nicholas Tierney     |
+| fable      | <https://github.com/tidyverts/fable>       | Rob / Mitch / Earo | Rob Hyndman          |
+| fasster    | <https://github.com/tidyverts/fasster>     | Mitch              | Dilini Talagala      |
+| sugrrants  | <https://github.com/earowang/sugrrants>    | Earo               | Di Cook              |
 
 # How to start
 

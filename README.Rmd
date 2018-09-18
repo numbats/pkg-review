@@ -9,6 +9,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(tidyverse)
 ```
 
 # numbat-pkg-review
@@ -19,12 +20,33 @@ This project will use a reduced set of guidelines based on [rOpenSci's package r
 
 # Suggested packages
 
-The suggested packages and authors are listed in [pkgs.csv]() and below:
+The suggested packages, authors, and reviewers are listed in [pkgs.csv]() and below:
 
 ```{r list-pkgs, cache = FALSE}
 pkgs <- readr::read_csv("pkgs.csv")
 
-knitr::kable(pkgs)
+ppl_to_review <-  c(
+  "Cameron Roach",
+  "Di Cook",
+  "Dilini Talagala",
+  "Earo Wang",
+  "Mitchell O’Hara-Wild",
+  "Nicholas Spyrison",
+  "Nicholas Tierney",
+  "Sayani Gupta",
+  "Stuart Lee",
+  "Rob Hyndman",
+  "Roger Peng",
+  "Ursula Laa",
+  "Thiyanga Talagala"
+)
+
+library(tidyverse)
+
+set.seed(2018-9-18-1717)
+pkgs %>%
+  mutate(reviewer = sample(ppl_to_review, replace = FALSE)) %>%
+  knitr::kable()
 ```
 
 
